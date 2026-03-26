@@ -13,8 +13,6 @@ CREATE TABLE  GeoIPCache (
     ID INT,
     IP_Range VARCHAR(50),
     CountryID INT,
-    CONSTRAINT FK_IPRangeCountry FOREIGN KEY (CountryID) REFERENCES Countries(ID),
-    PRIMARY KEY (ID)
 ) ENGINE=MEMORY;
 
 -- Create a table for storing product descriptions for different countries (Columns: ID, CountryID, ProductID, Description )
@@ -23,7 +21,6 @@ CREATE TABLE ProductDescription (
     CountryID INT,
     ProductID INT,
     Description VARCHAR(100),
-    CONSTRAINT FK_ProductDescriptionCountry FOREIGN KEY (CountryID) REFERENCES Countries(ID),
     PRIMARY KEY (ID)
 ) ENGINE=MyISAM;
 

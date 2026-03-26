@@ -11,7 +11,7 @@ CREATE TABLE Countries (
 -- Create a table for caching GeoIP data (Columns: ID, IP Range, CountryID)
 CREATE TABLE GeoIPCache (
     ID INT,
-    IP_Range VARCHAR(50),
+    IPRange VARCHAR(50),
     CountryID INT
 ) ENGINE=Memory;
 
@@ -28,8 +28,7 @@ CREATE TABLE ProductDescription (
 CREATE TABLE Logs (
     ID INT,
     Timestamp TIMESTAMP,
-    Message VARCHAR(255),
-    PRIMARY KEY (ID)
+    Message VARCHAR(255)
 ) ENGINE=BLACKHOLE;
 
 -- Create a table for storing reporting data, which will be send to a separate application in the CSV format for analytics purposes (Columns:  Date, ProductName, Orders)
